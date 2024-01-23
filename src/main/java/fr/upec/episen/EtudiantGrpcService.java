@@ -5,10 +5,11 @@ import fr.upec.episen.proto.EtudiantNameReply;
 import fr.upec.episen.proto.EtudiantNameRequest;
 import io.grpc.stub.StreamObserver;
 
-import javax.inject.Singleton;
+import io.quarkus.grpc.GrpcService;
+import jakarta.inject.Singleton;
 
 
-@Singleton
+@GrpcService
 public class EtudiantGrpcService extends EtudiantGrpc.EtudiantImplBase {
 
     @Override
@@ -18,7 +19,7 @@ public class EtudiantGrpcService extends EtudiantGrpc.EtudiantImplBase {
 
         switch (ine){
             case "u21815645":
-                nom = "Fabriste";
+                nom = "Fabrice";
                 break;
             case "1234567890G":
                 nom = "Dupont";
